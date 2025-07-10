@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { pizzaCart as carritoPizzasInicial } from '../pizzas';
 
 function Cart() {
+
   const [carrito, setCarrito] = useState(carritoPizzasInicial);
 
   // Función para incrementar la cantidad de una pizza
@@ -24,7 +25,6 @@ function Cart() {
 
   // Calcular el total de la compra
   const total = carrito.reduce((suma, item) => suma + item.precio * item.cantidad, 0);
-
   const totalFormateado = total.toLocaleString('es-CL');
 
   return (
@@ -61,7 +61,7 @@ function Cart() {
         </ul>
       )}
       <div className="d-flex justify-content-end align-items-center mb-4">
-        <h3>Total: ${totalFormateado}</h3>
+        <h3>Total: ${totalFormateado}</h3> 
       </div>
       <div className="d-grid gap-2">
         <button className="btn btn-primary btn-lg" onClick={() => alert('Función de pago aún no implementada')}>

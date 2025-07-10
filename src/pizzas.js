@@ -25,21 +25,21 @@ export const pizzas = [
     nombre: 'Barbacoa',
     precio: 7500,
     ingredientes: ['pollo', 'cebolla', 'salsa barbacoa', 'mozzarella'],
-    imagen: 'https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-3007395_640_com.jpg?alt=media&token=7c8d7b3a-5f9c-4f1e-8e6f-5e9a4f7b6c2c',
+    imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxfFkJPae7zH_am7RoaYgspQBNaCmeZV5GiQ&s',
   },
   {
     id: 'P005', // Nuevo id
     nombre: 'Hawaiana',
     precio: 6200,
     ingredientes: ['piña', 'jamón', 'mozzarella'],
-    imagen: 'https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-2802334_640_com.jpg?alt=media&token=2a0f8b3c-0e9f-4d0a-9e1a-8c3f4d7a8b9c',
+    imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiiJqlsPN_U9HEU4fHs8l87QRTuHrh2THSqA&s',
   },
   {
     id: 'P006', // Nuevo id
     nombre: 'Vegetariana',
     precio: 6500,
     ingredientes: ['pimientos', 'cebolla', 'champiñones', 'tomate', 'mozzarella'],
-    imagen: 'https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-2000612_640_com.jpg?alt=media&token=3b8a3c2d-1e4f-4d5e-9f0a-7c6d5b8a9f0e',
+    imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0MCmMNOkIMEdJwAVSu8UkrqdaFWyPqBM4JQ&s',
   },
 ];
 
