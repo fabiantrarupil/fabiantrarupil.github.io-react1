@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CardPizza = ({ name, price, ingredients, img }) => {
+const CardPizza = ({ nombre, precio, ingredientes, imagen }) => {
 
   const formattedPrice = price.toLocaleString('es-CL');
 
@@ -13,9 +13,8 @@ const CardPizza = ({ name, price, ingredients, img }) => {
           <p className="card-text">
             <strong>Ingredientes:</strong>
             <ul>
-              {ingredients.map((ingredient, index) => (
-
-                <li key={index}>{ingredient}</li>
+              {ingredientes.map((ingrediente, index) => (
+                <li key={index}>{ingrediente}</li>
               ))}
             </ul>
           </p>
