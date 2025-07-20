@@ -1,11 +1,10 @@
-// src/App.jsx
 import React from 'react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Footer from './components/Footer';
-import RegisterPage from './components/RegisterPage';
-import LoginPage from './components/LoginPage';
-import Cart from './components/Cart';
+// import RegisterPage from './components/RegisterPage'; // Puedes mantenerlos comentados
+// import LoginPage from './components/LoginPage'; // Puedes mantenerlos comentados
+// import Cart from './components/Cart'; // Comenta esta línea
 import './App.css';
 
 function App() {
@@ -13,9 +12,9 @@ function App() {
     <>
       <Navbar />
 
-      {/* <Home /> */}
+      <Home /> {/* Descomenta esta línea */}
 
-      <Cart />
+      {/* <Cart /> */} {/* Mueve Cart aquí y coméntalo */}
 
       {/* <RegisterPage /> */}
       {/* <LoginPage /> */}
