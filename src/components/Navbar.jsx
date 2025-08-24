@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const total = 25000;
@@ -9,37 +10,37 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">Pizzería Mamma Mia!</a>
+        <Link className="navbar-brand" to="/">Pizzería Mamma Mia!</Link>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <button className="btn btn-dark" type="button">Home</button>
+              <Link className="btn btn-dark" to="/">Home</Link>
             </li>
 
             {token ? (
               <>
                 <li className="nav-item">
-                  <button className="btn btn-dark" type="button">Profile</button>
+                  <Link className="btn btn-dark" to="/profile">Profile</Link>
                 </li>
                 <li className="nav-item">
-                  <button className="btn btn-dark" type="button">Logout</button>
+                  <Link className="btn btn-dark" to="/logout">Logout</Link>
                 </li>
               </>
             ) : (
               <>
                 <li className="nav-item">
-                  <button className="btn btn-dark" type="button">Login</button>
+                  <Link className="btn btn-dark" to="/login">Login</Link>
                 </li>
                 <li className="nav-item">
-                  <button className="btn btn-dark" type="button">Register</button>
+                  <Link className="btn btn-dark" to="/register">Register</Link>
                 </li>
               </>
             )}
           </ul>
           <div className="d-flex">
-            <button className="btn btn-dark" type="button">
+            <Link className="btn btn-dark" to="/cart">
               Total: ${formattedTotal}
-            </button>
+            </Link>
           </div>
         </div>
       </div>

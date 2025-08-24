@@ -8,7 +8,7 @@ const CardPizza = ({ id, nombre, price, ingredients, img }) => { // Asumo que 'i
   return (
     <div className="col-md-4 mb-4">
       <div className="card h-100">
-        {/* Usa 'img' aquí */}
+        {}
         <img src={img} className="card-img-top" alt={nombre} style={{ height: '200px', objectFit: 'cover' }} />
         <div className="card-body d-flex flex-column">
           <h5 className="card-title">{nombre}</h5>
@@ -16,7 +16,7 @@ const CardPizza = ({ id, nombre, price, ingredients, img }) => { // Asumo que 'i
             <strong>Ingredientes:</strong>
           </p>
           <ul>
-            {/* Usa 'ingredients' aquí */}
+            {}
             {ingredients && Array.isArray(ingredients) ? (
               ingredients.map((ingrediente, index) => (
                 <li key={index}>{ingrediente}</li>
@@ -25,7 +25,7 @@ const CardPizza = ({ id, nombre, price, ingredients, img }) => { // Asumo que 'i
               <li>No hay ingredientes disponibles</li>
             )}
           </ul>
-          {/* Usa 'formattedPrice' que usa 'price' */}
+          {}
           <h6 className="mt-auto">Precio: ${formattedPrice}</h6>
           <div className="d-flex justify-content-between mt-3">
             <button className="btn btn-outline-secondary btn-sm">Ver Más</button>

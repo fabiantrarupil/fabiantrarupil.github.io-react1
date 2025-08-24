@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import './Form.css';
+import '../components/Form.css';
 
-const LoginPage = () => {
+const RegisterPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [message, setMessage] = useState('');
   const [messageType, setMessageType] = useState('');
 
@@ -12,7 +13,7 @@ const LoginPage = () => {
     setMessage('');
     setMessageType('');
 
-    if (!email || !password) {
+    if (!email || !password || !confirmPassword) {
       setMessage('Todos los campos son obligatorios.');
       setMessageType('error');
       return;
@@ -24,19 +25,25 @@ const LoginPage = () => {
       return;
     }
 
-    if (email === 'test@example.com' && password === 'password123') { 
-      setMessage('¡Inicio de sesión exitoso!');
-      setMessageType('success');
-      console.log('Inicio de sesión exitoso:', { email });
-    } else {
-      setMessage('Credenciales inválidas. Por favor, inténtalo de nuevo.');
+    if (password !== confirmPassword) {
+      setMessage('La contraseña y la confirmación no coinciden.');
       setMessageType('error');
+      return; 
     }
+
+    
+    setMessage('¡Registro exitoso!');
+    setMessageType('success');
+    
+    console.log('Registro exitoso:', { email, password });
+    setEmail('');
+    setPassword('');
+    setConfirmPassword('');
   };
 
   return (
     <div className="form-container">
-      <h2>Iniciar Sesión</h2>
+      <h2>Registro</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
@@ -58,7 +65,17 @@ const LoginPage = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit" className="btn btn-primary mt-3">Iniciar Sesión</button>
+        <div className="form-group">
+          <label htmlFor="confirmPassword">Confirmar Contraseña:</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            className="form-control"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+        </div>
+        <button type="submit" className="btn btn-primary mt-3">Registrar</button>
       </form>
       {message && (
         <div className={`alert mt-3 ${messageType === 'success' ? 'alert-success' : 'alert-danger'}`}>
@@ -69,4 +86,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegisterPage;
